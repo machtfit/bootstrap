@@ -1,12 +1,12 @@
-import SelectorEngine from '../dom/selector-engine'
-import Manipulator from '../dom/manipulator'
-
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v5.0.0-beta1): util/scrollBar.js
+ * Bootstrap (v5.0.0-beta2): util/scrollBar.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */
+
+import SelectorEngine from '../dom/selector-engine'
+import Manipulator from '../dom/manipulator'
 
 const CLASS_NAME_SCROLLBAR_MEASURER = 'modal-scrollbar-measure'
 const SELECTOR_FIXED_CONTENT = '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top'
