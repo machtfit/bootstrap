@@ -27,17 +27,17 @@ Offcanvas is a sidebar component that can be toggled via JavaScript to appear fr
 
 Below is a _static_ offcanvas example (meaning its `position`, `display`, `visibility`, and more have been overridden). Offcanvas includes support for a header with close button and an optional body class for some initial `padding`. We ask that you include offcanvas headers with dismiss actions whenever possible, or provide another explicit dismiss action.
 
-<div class="bd-example bd-example-offcanvas p-0 bg-light">
-  <div class="offcanvas offcanvas-left" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
-      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      Content for the offcanvas goes here. You can place just about any Bootstrap component or custom elements here.
-    </div>
+{{< example class="bd-example-offcanvas p-0 bg-light" >}}
+<div class="offcanvas offcanvas-left" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    Content for the offcanvas goes here. You can place just about any Bootstrap component or custom elements here.
   </div>
 </div>
+{{< /example >}}
 
 ### Live demo
 
