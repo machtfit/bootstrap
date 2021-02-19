@@ -14,7 +14,7 @@ describe('ScrollBar', () => {
   })
 
   describe('isBodyOverflowing', () => {
-    it('should return true if body is overloading', () => {
+    it('should return true if body is overflowing', () => {
       fixtureEl.innerHTML = [
         '<div style="height: 110vh">' +
         '<div style="width: 100%; height: 80px"></div>' +
@@ -26,7 +26,7 @@ describe('ScrollBar', () => {
       expect(result).toEqual(true)
     })
 
-    it('should return false if body is overloading', () => {
+    it('should return false if body is overflowing', () => {
       fixtureEl.innerHTML = [
         '<div style="height: 90vh">' +
         '<div style="width: 100%; height: 80px"></div>' +
@@ -41,7 +41,7 @@ describe('ScrollBar', () => {
   })
 
   describe('getWidth', () => {
-    it('should return an integer if body is overloading', () => {
+    it('should return an integer if body is overflowing', () => {
       fixtureEl.innerHTML = [
         '<div style="height: 110vh">' +
         '<div style="width: 100%; height: 80px"></div>' +
@@ -53,7 +53,7 @@ describe('ScrollBar', () => {
       expect(result).toBeGreaterThan(1)
     })
 
-    it('should return 0 if body is overloading', () => {
+    it('should return 0 if body is overflowing', () => {
       fixtureEl.innerHTML = [
         '<div style="height: 90vh">' +
         '<div style="width: 100%; height: 80px"></div>' +
