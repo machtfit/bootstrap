@@ -33,8 +33,13 @@ jobs:
       - name: Install npm dependencies
         run: npm ci
 
-      - name: Run dist
-        run: npm run dist
+      - name: Download artifact
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          workflow: dist.yml
+          workflow_conclusion: success
+          name: dist
 
       - name: Run BrowserStack tests
         run: npm run js-test-cloud

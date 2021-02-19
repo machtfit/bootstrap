@@ -1,17 +1,14 @@
-name: CSS
+name: Dist
 
 on:
   push:
-    branches-ignore:
-      - "dependabot/**"
-  pull_request:
 
 env:
   FORCE_COLOR: 2
   NODE: 14
 
 jobs:
-  css:
+  browserstack:
     runs-on: ubuntu-latest
 
     steps:
@@ -34,5 +31,13 @@ jobs:
       - name: Install npm dependencies
         run: npm ci
 
-      - name: Build CSS
-        run: npm run css
+      - name: Run dist
+        run: npm run dist
+
+      - name: Upload dist files
+        uses: actions/upload-artifact@v2
+        if: github.repository == 'twbs/bootstrap'
+        with:
+          name: dist
+          path: ./dist/
+          if-no-files-found: error
